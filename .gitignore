@@ -226,3 +226,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+.idea/DataMining.iml
+.idea/encodings.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
