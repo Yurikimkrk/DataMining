@@ -17,14 +17,14 @@ LOG_LEVEL = "DEBUG"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = (
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:85.0) " "Gecko/20100101 " "Firefox/85.0"
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:86.0) Gecko/20100101 Firefox/86.0"
 )
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 8
+CONCURRENT_REQUESTS = 16
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -68,6 +68,7 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 IMAGES_STORE = "images"
 ITEM_PIPELINES = {
+    "gb_parse.pipelines.GbImageDownloadPipeline": 300,
     "gb_parse.pipelines.GbParseMongoPipeline": 300,
 }
 
